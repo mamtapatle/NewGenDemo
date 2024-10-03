@@ -1,0 +1,47 @@
+package com.testclass;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
+
+import com.baseclass.BaseClass;
+import com.pageObject.LoginPage;
+import com.pageObject.SubPage;
+
+public class LoginPageTest extends BaseClass{
+	
+	//WebDriver driver;//local driver 
+	
+	//constructor
+//	public LoginPageTest(WebDriver driver)
+//
+//	{
+//		this.driver=driver;
+//		PageFactory.initElements(driver,this);
+//	}
+	
+    @Test
+	public void TC_login()
+	{
+		String username=prop.getProperty("Username");
+		String password=prop.getProperty("Password");
+		LoginPage lp=new LoginPage(driver);
+		lp.enterUsername(username);
+		lp.enterPassword(password);
+		lp.enterLoginBtn();
+		
+	}
+	
+    
+    @Test
+    public void TC_SubPage()
+    {
+    	String name=prop.getProperty("Name");
+    	SubPage sp=new SubPage(driver);
+    	sp.clickTime();
+    	sp.enterUsername(name);
+    	sp.enterSubmitBtn();
+    }
+			
+			
+}

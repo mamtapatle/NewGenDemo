@@ -1,0 +1,48 @@
+package com.StepDefinition;
+
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class StepDefinition {
+	
+	@Given("user will launch the browser and will pass the \"<Url>\"")
+	public void verifyLoginPage()
+	{
+		
+	}
+	
+	
+
+	@Given("user will launch the browser and will pass the {string}")
+	public void user_will_launch_the_browser_and_will_pass_the(String string) {
+	    
+	}
+
+
+	@When("user will enter the username {string}")
+	public void user_will_enter_the_username(String string) {
+	   
+	}
+
+	@When("password {string}")
+	public void password(String string) {
+	    
+	}
+
+	@And("user will click on login button")
+	public void user_will_click_on_login_button() {
+	    
+	}
+
+	@Then("user will go to the home page")
+	public void user_will_go_to_the_home_page() {
+	   
+	}
+
+
+
+	
+
+}

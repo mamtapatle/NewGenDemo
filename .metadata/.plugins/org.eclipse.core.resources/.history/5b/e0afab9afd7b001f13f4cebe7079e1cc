@@ -1,0 +1,22 @@
+package com.pageObject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+public class SubPage {
+WebDriver driver;//local driver 
+	
+	// constructor
+	public AdminPage(WebDriver driver)//remote driver
+	{
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	
+	By time=By.xpath("//span[text()='Time']");
+	
+	
+
+}

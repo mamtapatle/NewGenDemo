@@ -1,0 +1,21 @@
+package stepDefinitionPKG;
+
+import org.junit.runner.RunWith;
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
+
+
+
+
+//@RunWith(Cucumber.class)
+@CucumberOptions
+(features={"src/main/java/featureFile"},
+glue= {"src\\test\\java\\stepDefinitionPKG"},
+tags="@E2E_Testing",
+monochrome=true,
+dryRun = false)
+public class TestRunner extends AbstractTestNGCucumberTests {
+
+}

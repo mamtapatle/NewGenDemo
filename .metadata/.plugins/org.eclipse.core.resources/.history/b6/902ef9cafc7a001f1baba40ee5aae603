@@ -1,0 +1,46 @@
+package testNG;
+
+import org.testng.asserts.SoftAssert;
+
+public class NewClass {
+
+	
+	int a;
+	int b;
+	int c;
+	public void TC_1() {
+
+		a=5;
+		b=5;
+		c=a+b;
+		System.out.println("this is TC 1"+c);
+		SoftAssert a =new SoftAssert();
+		a.assertEquals(c, "11");
+		a.assertAll("data not matching");
+	}
+
+	public void TC_2() {
+
+		a=5;
+		b=6;
+		c=a+b;
+		System.out.println("this is TC 2"+c);
+	}
+
+	public void TC_3() {
+
+		a=8;
+		b=5;
+		c=a+b;
+		System.out.println("this is TC 3"+c);
+	}
+
+	public void TC_4() {
+
+		a=1;
+		b=5;
+		c=a+b;
+		System.out.println("this is TC 4"+c);
+	}
+
+}

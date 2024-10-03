@@ -1,0 +1,18 @@
+package stepDefinitionPKG;
+
+import org.junit.runner.RunWith;
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.testng.CucumberOptions;
+
+
+
+@RunWith(Cucumber.class)
+@CucumberOptions(features={"src\\main\\java\\featureFilePKG"},
+glue= {"StepDefinitionPKG"},
+tags="@Login_Test",
+monochrome=true,
+dryRun = false)
+public class TestRunner {
+
+}

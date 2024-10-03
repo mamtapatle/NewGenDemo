@@ -1,0 +1,10 @@
+package BDD_functionalTest.BDD_functionalTest;
+
+/**
+ * Hello world!
+ */
+public class App {
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
+}

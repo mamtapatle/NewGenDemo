@@ -1,0 +1,52 @@
+package stepDefinitions;
+
+import java.time.Duration;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.cucumber.java.Before;
+import io.cucumber.java.BeforeStep;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import pageObjcets.LoginPage;
+
+public class StepDefinition {
+	
+	public WebDriver driver;
+	LoginPage lp;
+	
+	@BeforeStep
+	public void readLP()
+	{
+		lp=new LoginPage(driver);
+		
+	}
+
+	@Given("user will launch the browser and will pass the {string}")
+	public void user_will_launch_the_browser_and_will_pass_the(String Url) {
+		
+	}
+
+	@When("user will enter the username {string} and password {string}")
+	public void user_will_enter_the_username_and_password(String Username, String Password) {
+		
+		lp.enterUsername(Username);
+		lp.enterPassword(Password);
+		
+	}
+
+	@And("user will click on login button")
+	public void user_will_click_on_login_button() {
+		lp.enterLoginBtn();
+	}
+
+	@Then("user will go to the home page")
+	public void user_will_go_to_the_home_page() {
+		
+	}
+
+}
